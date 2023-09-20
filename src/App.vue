@@ -1,4 +1,11 @@
-<script setup></script>
+<script setup>
+import { onMounted } from "vue";
+import store from "./store";
+
+onMounted(() => {
+  store.dispatch("getAnime");
+});
+</script>
 
 <template>
   <h1 class="text-3xl font-bold underline">Hello world!</h1>
