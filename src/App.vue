@@ -1,12 +1,13 @@
 <script setup>
 import { onMounted } from "vue";
+import Navbar from "./features/navbar/Navbar.vue";
 import store from "./store";
 
 onMounted(() => {
-  store.dispatch("getAnime");
+  store.dispatch("getTopAnime");
 });
 </script>
 
 <template>
-  <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <Navbar />
 </template>

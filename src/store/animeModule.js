@@ -2,18 +2,18 @@ import axios from "axios";
 
 export const animeModule = {
   state: () => ({
-    animeList: [],
+    topAnimeList: [],
   }),
   mutations: {
-    setAnimeList(state, animeList) {
-      state.animeList = animeList;
+    setTopAnimeList(state, animeList) {
+      state.topAnimeList = animeList;
     },
   },
   actions: {
-    async getAnime({ state, commit }) {
+    async getTopAnime({ state, commit }) {
       const response = await axios.get("top/anime");
       console.log(response);
-      commit("setAnimeList", response.data);
+      commit("setTopAnimeList", response.data);
     },
   },
 };
